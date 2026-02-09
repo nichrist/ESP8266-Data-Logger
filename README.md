@@ -139,7 +139,8 @@ ESP8266-Data-Logger/
 │   └── wiring_schematic.pdf
 └── images/
 
-Applications
+### Applications
+![Web UI demo](images/web-ui.png)
 
 This design can be adapted for:
 
