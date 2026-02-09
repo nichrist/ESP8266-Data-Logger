@@ -43,6 +43,7 @@ Sensor and peripheral modules easily replaceable
 Web-accessible data when externally powered
 
 Operating Modes
+
 🔋 Battery Mode (Low Power)
 
 ESP8266 wakes periodically
@@ -54,6 +55,7 @@ Logs data to SD card
 Returns to deep sleep
 
 Approximate battery life: ~10 days (depending on configuration)
+
 
 🔌 Powered Mode (Wi-Fi Enabled)
 
