@@ -113,7 +113,6 @@ The firmware is written in **Arduino C++** and built using **PlatformIO**.
 
 ### Build & Upload
 
-```bash
 cd firmware
 pio run
 pio run -t upload
@@ -128,6 +127,7 @@ Toolchain: PlatformIO
 
 Firmware-specific details are documented in
 firmware/README.md.
+
 ESP8266-Data-Logger/
 ├── README.md
 ├── firmware/
@@ -139,42 +139,39 @@ ESP8266-Data-Logger/
 │   └── wiring_schematic.pdf
 └── images/
 
+---
 ### Applications
-![Web UI demo](hardware/ESPDataLoggerPinout.pdf)
 
 This design can be adapted for:
 
-Environmental monitoring
+- Environmental monitoring
+- Agricultural soil sensing
+- Remote sensor nodes
 
-Agricultural soil sensing
+- Battery-powered data loggers
 
-Remote sensor nodes
+- IoT proof-of-concept systems
 
-Battery-powered data loggers
-
-IoT proof-of-concept systems
-
-What I Can Build for You
+What I Can Build for You:
 
 Based on this project, I can help with:
 
-Custom ESP8266 / ESP32 firmware
+- Custom ESP8266 / ESP32 firmware
 
-Low-power IoT system design
+- Low-power IoT system design
 
-Sensor integration and data logging
+- Sensor integration and data logging
 
-KiCad schematic and PCB design
+- KiCad schematic and PCB design
 
-Prototype-to-production transition (JLCPCB-ready files)
-
-Author
-
+- Prototype-to-production transition (JLCPCB-ready files)
+---
+### Author
 Nick Christodoulou
-Electronics & Firmware Engineer
-Email: nichrist71@gmail.com
-Email: nichrist71@gmail.com
+ - Electronics & Firmware Engineer
+ - Email: nichrist71@gmail.com
 
+---
 License
 
 This project is released under the MIT License.
