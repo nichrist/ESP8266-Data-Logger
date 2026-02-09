@@ -140,7 +140,7 @@ ESP8266-Data-Logger/
 └── images/
 
 ### Applications
-![Web UI demo](images/web-ui.png)
+![Web UI demo](hardware/ESPDataLoggerPinout.pdf)
 
 This design can be adapted for:
 
