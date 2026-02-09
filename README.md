@@ -6,20 +6,23 @@
 
 ## Overview
 
-This project is a dual-mode **ESP8266-based environmental data logger** designed for long-term, unattended monitoring of environmental parameters such as temperature, barometric pressure, and soil humidity.
+This project is a **dual-mode ESP8266-based environmental data logger** designed for long-term, unattended monitoring of environmental parameters such as **temperature**, **barometric pressure**, and **soil humidity**.
 
-The system can operate either in **low-power battery mode** using deep sleep, or in **continuous powered mode** with Wi-Fi access and a built-in HTML web interface.
+The system can operate either in:
 
-This project demonstrates **embedded firmware design**, **hardware integration**, and **production-aware documentation**, suitable for prototyping and small-scale deployments.
+- **Low-power battery mode**, using deep sleep for extended autonomous operation  
+- **Continuous powered mode**, providing Wi-Fi access and a built-in HTML web interface
+
+This project demonstrates **embedded firmware development**, **hardware integration**, and **production-aware documentation**, and is suitable for prototyping, field testing, and small-scale deployments.
 
 ---
 
 ## Key Features
 
-- ESP8266 (LoLin NodeMCU) controller
+- ESP8266 controller (LoLin NodeMCU)
 - Dual operating modes:
-  - **Battery-powered low-power mode** (deep sleep)
-  - **5V-powered Wi-Fi mode** with web interface
+  - 🔋 **Battery-powered low-power mode** (deep sleep)
+  - 🔌 **5V-powered Wi-Fi mode** with web interface
 - Environmental sensing:
   - Temperature
   - Barometric pressure (BMP280)
@@ -27,9 +30,9 @@ This project demonstrates **embedded firmware design**, **hardware integration**
 - Data logging:
   - Local storage on MicroSD card (SPI)
 - Timekeeping:
-  - RTC module via I²C for timestamped logs
+  - RTC module (I²C) for timestamped logs
 - Modular design:
-  - Sensor and peripheral modules easily replaceable
+  - Sensors and peripherals easily replaceable
 - Web-accessible data when externally powered
 
 ---
@@ -39,16 +42,21 @@ This project demonstrates **embedded firmware design**, **hardware integration**
 ### 🔋 Battery Mode (Low Power)
 
 - ESP8266 wakes periodically
-- Reads sensors
+- Reads all sensors
 - Logs data to SD card
 - Returns to deep sleep
-- Approximate battery life: **~10 days** (depending on configuration)
+- Approximate battery life: **~10 days** (configuration-dependent)
+
+This mode is intended for **unattended data collection** where power consumption is critical.
+
+---
 
 ### 🔌 Powered Mode (Wi-Fi Enabled)
 
-- Continuous operation from 5V supply
+- Continuous operation from external 5V supply
 - ESP8266 runs as a Wi-Fi access point
-- Embedded HTML page for data visualization and access
+- Embedded HTML page served directly by the ESP8266
+- Enables data visualization and access without removing the SD card
 
 ---
 
@@ -64,9 +72,9 @@ This project demonstrates **embedded firmware design**, **hardware integration**
 
 ### Communication Interfaces
 
-- **I²C**: BMP280, RTC
-- **SPI**: MicroSD card
-- **ADC**: Soil moisture sensor
+- **I²C** → BMP280, RTC  
+- **SPI** → MicroSD card  
+- **ADC** → Soil moisture sensor  
 
 ### Power
 
@@ -74,7 +82,20 @@ This project demonstrates **embedded firmware design**, **hardware integration**
 - Battery or external 5 V supply
 - Deep sleep wake-up via GPIO16 → RST
 
-See `hardware/wiring_schematic.pdf` for full wiring details.
+📄 Full wiring details are available in  
+`hardware/wiring_schematic.pdf`
+
+---
+
+## Example Data Output
+
+Logged data is stored on the SD card in a simple, readable format:
+
+2026-02-09 12:00, 24.8°C, 1012 hPa, 42%
+2026-02-09 12:15, 24.7°C, 1012 hPa, 43%
+
+
+This format allows easy import into spreadsheets or data analysis tools.
 
 ---
 
@@ -85,14 +106,77 @@ The firmware is written in **Arduino C++** and built using **PlatformIO**.
 ### Firmware Features
 
 - Deep sleep power management
-- Sensor abstraction and modular drivers
+- Modular sensor drivers
 - SD card file logging
 - Optional Wi-Fi web server
 - Non-blocking design principles
 
-### Build Instructions
+### Build & Upload
 
 ```bash
 cd firmware
 pio run
 pio run -t upload
+pio device monitor
+Platform Details
+
+Framework: Arduino
+
+Board: LoLin NodeMCU (ESP8266)
+
+Toolchain: PlatformIO
+
+Firmware-specific details are documented in
+firmware/README.md.
+ESP8266-Data-Logger/
+├── README.md
+├── firmware/
+│   ├── platformio.ini
+│   ├── src/
+│   ├── include/
+│   └── README.md
+├── hardware/
+│   └── wiring_schematic.pdf
+└── images/
+
+Applications
+
+This design can be adapted for:
+
+Environmental monitoring
+
+Agricultural soil sensing
+
+Remote sensor nodes
+
+Battery-powered data loggers
+
+IoT proof-of-concept systems
+
+What I Can Build for You
+
+Based on this project, I can help with:
+
+Custom ESP8266 / ESP32 firmware
+
+Low-power IoT system design
+
+Sensor integration and data logging
+
+KiCad schematic and PCB design
+
+Prototype-to-production transition (JLCPCB-ready files)
+
+Author
+
+Nick Christodoulou
+Electronics & Firmware Engineer
+Email: nichrist71@gmail.com
+Email: nichrist71@gmail.com
+
+License
+
+This project is released under the MIT License.
+Contact me for commercial use, customization, or consulting work.
+
+
