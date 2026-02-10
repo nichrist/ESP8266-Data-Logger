@@ -61,6 +61,7 @@ This mode is intended for **unattended data collection** where power consumption
 ---
 
 ## Hardware Overview
+[![Schematic Preview](docs/schematic_preview.png)](docs/schematic.pdf)
 
 ### Main Components
 
