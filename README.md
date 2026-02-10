@@ -61,7 +61,7 @@ This mode is intended for **unattended data collection** where power consumption
 ---
 
 ## Hardware Overview
-[![Schematic Preview](/hardware/ESPDataLoggerPinoutpng)](hardware/ESPDataLoggerPinout.pdf)
+[![Schematic Preview](/hardware/ESPDataLoggerPinout.png)](hardware/ESPDataLoggerPinout.pdf)
 
 ### Main Components
 
