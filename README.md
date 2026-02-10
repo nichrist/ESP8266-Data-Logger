@@ -83,9 +83,6 @@ This mode is intended for **unattended data collection** where power consumption
 - Battery or external 5 V supply
 - Deep sleep wake-up via GPIO16 → RST
 
-📄 Full wiring details are available in  
-`hardware/wiring_schematic.pdf`
-
 ---
 
 ## Example Data Output
@@ -128,17 +125,6 @@ Toolchain: PlatformIO
 
 Firmware-specific details are documented in
 firmware/README.md.
-
-ESP8266-Data-Logger/
-├── README.md
-├── firmware/
-│   ├── platformio.ini
-│   ├── src/
-│   ├── include/
-│   └── README.md
-├── hardware/
-│   └── wiring_schematic.pdf
-└── images/
 
 ---
 ### Applications
